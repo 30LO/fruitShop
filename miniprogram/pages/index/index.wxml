@@ -40,6 +40,7 @@
     </navigator>
   </view>
  <view class='uploader'>
+    <text>{{userData}}</text>
     <button bindtap='getUser' class="userinfo-nickname">查询数据库</button>
   </view>
 </view>

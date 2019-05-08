@@ -5,6 +5,7 @@ Page({
   data: {
     avatarUrl: './user-unlogin.png',
     userInfo: {},
+    userData:'',
     logged: false,
     takeSession: false,
     requestResult: ''
@@ -51,6 +52,11 @@ Page({
       data:{},
       success:res=>{
         console.log(res);
+        const data = res.result.data;
+        this.setData({
+          userData:JSON.stringify(data)
+        })
+
       },
       fail:err=>{
         console.log(err);
