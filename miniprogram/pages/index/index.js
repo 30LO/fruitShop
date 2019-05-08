@@ -45,7 +45,18 @@ Page({
       })
     }
   },
-
+  getUser: function () {
+    wx.cloud.callFunction({
+      name:'getUser',
+      data:{},
+      success:res=>{
+        console.log(res);
+      },
+      fail:err=>{
+        console.log(err);
+      }
+    });
+  },
   onGetOpenid: function() {
     // 调用云函数
     wx.cloud.callFunction({
@@ -53,6 +64,7 @@ Page({
       data: {},
       success: res => {
         console.log('[云函数] [login] user openid: ', res.result.openid)
+        console.log(`获取的用户信息是${JSON.stringify(res)}`);
         app.globalData.openid = res.result.openid
         wx.navigateTo({
           url: '../userConsole/userConsole',
@@ -115,6 +127,5 @@ Page({
         console.error(e)
       }
     })
-  },
-
+  }
 })
