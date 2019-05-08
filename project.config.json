@@ -10,7 +10,7 @@
 	},
 	"appid": "wx2fce92bc6c844328",
 	"projectname": "fruitshop",
-	"libVersion": "2.2.5",
+	"libVersion": "2.6.6",
 	"condition": {
 		"search": {
 			"current": -1,
