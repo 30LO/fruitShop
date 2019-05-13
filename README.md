@@ -20,16 +20,16 @@ git clone git@github.com:Harhao/fruitShop.git
 
 - 不过project.config.json文件和app.js的云开发环境需要替换成自己的开发环境
 
-  ```bash
-  //app.js
-  wx.cloud.init({
-    traceUser: true,
-    env:''//这里是自己的开发环境
-  })
+```bash
+ //app.js
+ wx.cloud.init({
+   traceUser: true,
+   env:''//这里是自己的开发环境
+ })
   
-  // project.config.json文件
-  "appid": "wx2fce92bc6c844328",//替换成自己的appid
-  ```
+ // project.config.json文件
+ "appid": "wx2fce92bc6c844328",//替换成自己的appid
+```
   
   
   
