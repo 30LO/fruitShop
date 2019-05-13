@@ -1,10 +1,88 @@
-# 云开发 quickstart
+fruitShop生鲜水果小程序
 
-这是云开发的快速启动指引，其中演示了如何上手使用云开发的三大基础能力：
+> 采用微信小程序云开发功能开发线上水果电商小程序
+>
+> 后台环境：云开发环境
 
-- 数据库：一个既可在小程序前端操作，也能在云函数中读写的 JSON 文档型数据库
-- 文件存储：在小程序前端直接上传/下载云端文件，在云开发控制台可视化管理
-- 云函数：在云端运行的代码，微信私有协议天然鉴权，开发者只需编写业务逻辑代码
+### 下载
+
+```bash
+git clone git@github.com:Harhao/fruitShop.git
+```
+
+
+
+### 使用
+
+- 打开微信开发者工具直接引入文件即可
+
+- 不过project.config.json文件和app.js的云开发环境需要替换成自己的开发环境
+
+  ```bash
+  //app.js
+  App({
+    onLaunch: function () {
+      
+      if (!wx.cloud) {
+        console.error('请使用 2.2.3 或以上的基础库以使用云能力')
+      } else {
+        wx.cloud.init({
+          traceUser: true,
+          env:''//这里是自己的开发环境
+        })
+      }
+  
+      this.globalData = {}
+    }
+  })；
+  // project.config.json文件
+  {
+  	"miniprogramRoot": "project",
+  	"cloudfunctionRoot": "cloud",
+  	"setting": {
+  		"urlCheck": true,
+  		"es6": true,
+  		"postcss": true,
+  		"minified": true,
+  		"newFeature": true
+  	},
+  	"appid": "wx2fce92bc6c844328",//替换成自己的appid
+  	"projectname": "fruitshop",
+  	"libVersion": "2.6.6",
+  	"condition": {
+  		"search": {
+  			"current": -1,
+  			"list": []
+  		},
+  		"conversation": {
+  			"current": -1,
+  			"list": []
+  		},
+  		"plugin": {
+  			"current": -1,
+  			"list": []
+  		},
+  		"game": {
+  			"list": []
+  		},
+  		"miniprogram": {
+  			"current": 0,
+  			"list": [
+  				{
+  					"id": -1,
+  					"name": "db guide",
+  					"pathName": "pages/databaseGuide/databaseGuide"
+  				}
+  			]
+  		}
+  	}
+  }
+  
+  ```
+
+  
+
+  
 
 ## 参考文档
 
