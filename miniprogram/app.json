@@ -1,12 +1,10 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/userConsole/userConsole",
-    "pages/storageConsole/storageConsole",
-    "pages/databaseGuide/databaseGuide",
-    "pages/addFunction/addFunction",
-    "pages/deployFunctions/deployFunctions",
-    "pages/chooseLib/chooseLib"
+    "pages/search/search",
+    "pages/cart/cart",
+    "pages/person/person",
+    "pages/classrify/classrify"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -14,5 +12,35 @@
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "生鲜水果",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#009944",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./images/index.png",
+        "selectedIconPath": "./images/indexSelect.png"
+      },
+      {
+        "pagePath": "pages/classrify/classrify",
+        "text": "分类",
+        "iconPath": "./images/classrify.png",
+        "selectedIconPath": "./images/classSelect.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "./images/cart.png",
+        "selectedIconPath": "./images/cartSelect.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "我的",
+        "iconPath": "./images/person.png",
+        "selectedIconPath": "./images/personSelect.png"
+      }
+    ]
   }
 }
