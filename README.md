@@ -1,4 +1,4 @@
-fruitShop生鲜水果小程序
+### fruitShop生鲜水果小程序
 
 > 采用微信小程序云开发功能开发线上水果电商小程序
 >
@@ -14,74 +14,25 @@ git clone git@github.com:Harhao/fruitShop.git
 
 ### 使用
 
-- 打开微信开发者工具直接引入文件即可
+- 微信云开发小程序需要先开通云开发环境，自行了解微信云开发开通流程
+
+- 微信开发者工具直接引入项目文件夹即可
 
 - 不过project.config.json文件和app.js的云开发环境需要替换成自己的开发环境
 
   ```bash
   //app.js
-  App({
-    onLaunch: function () {
-      
-      if (!wx.cloud) {
-        console.error('请使用 2.2.3 或以上的基础库以使用云能力')
-      } else {
-        wx.cloud.init({
-          traceUser: true,
-          env:''//这里是自己的开发环境
-        })
-      }
+  wx.cloud.init({
+    traceUser: true,
+    env:''//这里是自己的开发环境
+  })
   
-      this.globalData = {}
-    }
-  })；
   // project.config.json文件
-  {
-  	"miniprogramRoot": "project",
-  	"cloudfunctionRoot": "cloud",
-  	"setting": {
-  		"urlCheck": true,
-  		"es6": true,
-  		"postcss": true,
-  		"minified": true,
-  		"newFeature": true
-  	},
-  	"appid": "wx2fce92bc6c844328",//替换成自己的appid
-  	"projectname": "fruitshop",
-  	"libVersion": "2.6.6",
-  	"condition": {
-  		"search": {
-  			"current": -1,
-  			"list": []
-  		},
-  		"conversation": {
-  			"current": -1,
-  			"list": []
-  		},
-  		"plugin": {
-  			"current": -1,
-  			"list": []
-  		},
-  		"game": {
-  			"list": []
-  		},
-  		"miniprogram": {
-  			"current": 0,
-  			"list": [
-  				{
-  					"id": -1,
-  					"name": "db guide",
-  					"pathName": "pages/databaseGuide/databaseGuide"
-  				}
-  			]
-  		}
-  	}
-  }
-  
+  "appid": "wx2fce92bc6c844328",//替换成自己的appid
   ```
-
   
-
+  
+  
   
 
 ## 参考文档
